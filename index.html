@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAES - Jovens em Ação</title>
+    <style>
+        /* Reset e configurações básicas */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Navbar */
+        nav {
+            background: #2d2d2d;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff7b00;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff7b00;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Cabeçalhos */
+        h1 {
+            text-align: center;
+            color: #2d2d2d;
+            margin: 2rem 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            color: #2d2d2d;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ff7b00;
+            font-size: 1.8rem;
+        }
+
+        h4 {
+            color: #ff7b00;
+            margin: 1.5rem 0 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        /* Parágrafos */
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Imagens */
+        .img-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ff7b00, #ff9d42);
+            min-height: 250px;
+            margin: 1rem auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            color: white;
+            font-style: italic;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Seções de atividades */
+        .activity {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 1.5rem 0;
+            border-left: 4px solid #ff7b00;
+        }
+
+        /* Links */
+        .regimento-link {
+            display: inline-block;
+            background: #ff7b00;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .regimento-link:hover {
+            background: #e56d00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #2d2d2d;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+
+        .footer-links a {
+            color: #ff7b00;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+                margin: 1rem 0;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h4 {
+                font-size: 1.1rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        /* Animações suaves */
+        * {
+            transition: all 0.3s ease;
+        }
+
+        /* Destaque para a descrição do grupo */
+        .group-description {
+            font-size: 1.1rem;
+            background: linear-gradient(135deg, #ff7b00, #ff9d42);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 1rem 0 2rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Efeitos de hover nas seções */
+        h2:hover, h4:hover {
+            color: #ff7b00;
+        }
+
+        /* Melhorias de acessibilidade */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <div class="logo">JAES</div>
+        <div class="nav-links">
+            <a href="#historia">História</a>
+            <a href="#atividades">Atividades</a>
+            <a href="#objetivo">Objetivo</a>
+            <a href="#regimento">Regimento</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>JAES</h1>
+    
+    <div class="group-description">
+        <p>O JAES (Jovens em Ação Evangelizadora e Social) é um grupo de jovens comprometidos com a transformação social através da fé e da ação concreta. Nossa missão é formar líderes cristãos que atuem como agentes de mudança em suas comunidades.</p>
+    </div>
+
+    <div class="img-placeholder">
+        Imagem do Grupo JAES
+    </div>
+
+    <section id="historia">
+        <h2>História</h2>
+        <h4>Nossa Trajetória</h4>
+        <p>O JAES foi fundado em 2010 por um grupo de jovens da Paróquia São João Bosco, com o objetivo de unir espiritualidade e ação social. Desde então, temos crescido e desenvolvido diversas atividades que impactam positivamente nossa comunidade.</p>
+        <p>Começamos com apenas 10 integrantes e hoje contamos com mais de 50 jovens ativos, realizando projetos que vão desde o apoio educacional até ações de assistência social para famílias carentes.</p>
+    </section>
+
+    <section id="atividades">
+        <h2>Atividades</h2>
+        
+        <div class="activity">
+            <h4>Dom Bosquinho</h4>
+            <p>Projeto de evangelização infantil que acontece aos domingos, onde as crianças da comunidade participam de atividades lúdicas, contação de histórias bíblicas e momentos de oração. É uma forma de transmitir os valores cristãos de maneira divertida e acessível.</p>
+            <div class="img-placeholder">Imagem do Dom Bosquinho</div>
+        </div>
+
+        <div class="activity">
+            <h4>SAICA</h4>
+            <p>Visitas regulares ao Serviço de Acolhimento Institucional para Crianças e Adolescentes, onde realizamos atividades recreativas, oficinas educativas e oferecemos apoio emocional e espiritual aos acolhidos.</p>
+            <div class="img-placeholder">Imagem da atividade no SAICA</div>
+        </div>
+
+        <div class="activity">
+            <h4>Festival das Rosas</h4>
+            <p>Evento anual que combina música, arte e solidariedade. O festival arrecada fundos para nossos projetos sociais através da venda de rosas e produtos artesanais confeccionados pelos próprios jovens do grupo.</p>
+            <div class="img-placeholder">Imagem do Festival das Rosas</div>
+        </div>
+
+        <div class="activity">
+            <h4>JAESTUDO</h4>
+            <p>Programa de reforço escolar para crianças e adolescentes da comunidade, oferecendo acompanhamento pedagógico, orientação de estudos e preparação para vestibulares, sempre aliando educação e valores cristãos.</p>
+            <div class="img-placeholder">Imagem do JAESTUDO</div>
+        </div>
+    </section>
+
+    <section id="objetivo">
+        <h2>Objetivo</h2>
+        <h4>Nossa Missão</h4>
+        <p>Formar jovens cristãos comprometidos com a transformação social, capazes de atuar como agentes de mudança em suas comunidades, vivendo e propagando os valores do Evangelho através de ações concretas de solidariedade, justiça e paz.</p>
+    </section>
+
+    <section id="regimento">
+        <h2>Regimento</h2>
+        <p>Conheça nosso regimento interno que estabelece as diretrizes, direitos e deveres dos integrantes do JAES.</p>
+        <a href="regimento-jaes.pdf" class="regimento-link">Baixar Regimento (PDF)</a>
+    </section>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="https://instagram.com/jaes" target="_blank">Instagram</a>
+            <a href="https://paroquiasaojoaobosco.com" target="_blank">Paróquia</a>
+            <a href="#">Endereço: Rua Exemplo, 123 - Centro</a>
+        </div>
+        <p>Criado por um integrante do grupo JAES</p>
+        <p>© 2023 JAES - Todos os direitos reservados</p>
+    </div>
+</footer>
+
+</body>
+</html>
