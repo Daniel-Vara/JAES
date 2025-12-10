@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAES - Jovens em Ação Evangelizadora e Social</title>
+    <!-- Link para o novo arquivo de estilo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link para uma fonte moderna do Google Fonts (ex: Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 1. Navegação Aprimorada -->
+    <nav id="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">JAES - ST</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="#home" class="nav-item active">JAES</a>
+                <a href="#historia" class="nav-item">História</a>
+                <a href="#atividades" class="nav-item">Atividades</a>
+                <a href="#objetivo" class="nav-item">Objetivo</a>
+                <a href="#regimento" class="nav-item">Regimento</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 2. Seção Hero (Destaque) -->
+        <header id="home" class="hero-section container">
+            <div class="hero-content">
+                <h1 class="main-title">JAES</h1>
+                <p class="group-description">
+                    O JAES (Jovens em Ação Evangelizadora e Social) é um grupo de jovens comprometidos com a transformação social através da fé e da ação concreta. Nossa missão é formar líderes cristãos que atuem como agentes de mudança em suas comunidades.
+                </p>
+                <a href="#atividades" class="cta-button">Conheça Nossas Ações</a>
+            </div>
+            <div class="hero-image">
+                <!-- Placeholder para uma imagem visualmente impactante -->
+                <div class="image-placeholder">
+                    <p>Imagem de Destaque do Grupo JAES</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- 3. Seções de Conteúdo (Com estrutura de cabeçalho e classe comum) -->
+        <section id="historia" class="content-section container">
+            <div class="section-header">
+                <h2>História</h2>
+                <p class="subtitle">Nossa Trajetória</p>
+            </div>
+            <div class="section-body">
+                <p>O JAES foi fundado em 2010 por um grupo de jovens da Paróquia São João Bosco, com o objetivo de unir espiritualidade e ação social. Desde então, temos crescido e desenvolvido diversas atividades que impactam positivamente nossa comunidade.</p>
+                <p>Começamos com apenas 10 integrantes e hoje contamos com mais de 50 jovens ativos, realizando projetos que vão desde o apoio educacional até ações de assistência social para famílias carentes.</p>
+            </div>
+        </section>
+
+        <section id="objetivo" class="content-section container bg-light">
+            <div class="section-header">
+                <h2>Objetivo</h2>
+                <p class="subtitle">Nossa Missão</p>
+            </div>
+            <div class="section-body">
+                <p>Formar jovens cristãos comprometidos com a transformação social, capazes de atuar como agentes de mudança em suas comunidades, vivendo e propagando os valores do Evangelho através de ações concretas de solidariedade, justiça e paz.</p>
+            </div>
+        </section>
+
+        <section id="regimento" class="content-section container">
+            <div class="section-header">
+                <h2>Regimento</h2>
+                <p class="subtitle">Diretrizes e Deveres</p>
+            </div>
+            <div class="section-body">
+                <p>Conheça nosso regimento interno que estabelece as diretrizes, direitos e deveres dos integrantes do JAES.</p>
+                <a href="regimento-jaes.pdf" class="regimento-link button-secondary" target="_blank">
+                    <i class="icon-download"></i> Baixar Regimento (PDF)
+                </a>
+            </div>
+        </section>
+        
+        <!-- Seção de Atividades (Adicionada para completar o menu) -->
+        <section id="atividades" class="content-section container bg-light">
+            <div class="section-header">
+                <h2>Atividades</h2>
+                <p class="subtitle">Onde Estamos Atuando</p>
+            </div>
+            <div class="section-body grid-3">
+                <div class="activity-card">
+                    <h3>Apoio Educacional</h3>
+                    <p>Oferecemos reforço escolar e oficinas para crianças e adolescentes carentes da comunidade.</p>
+                </div>
+                <div class="activity-card">
+                    <h3>Visitas a Asilos</h3>
+                    <p>Promovemos momentos de alegria e assistência aos idosos em lares de longa permanência.</p>
+                </div>
+                <div class="activity-card">
+                    <h3>Campanhas de Alimentos</h3>
+                    <p>Realizamos coletas e distribuição de cestas básicas para famílias em situação de vulnerabilidade.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 4. Rodapé Aprimorado -->
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-col logo-col">
+                <h3>JAES - ST</h3>
+                <p class="tagline">Jovens em Ação Evangelizadora e Social</p>
+            </div>
+            <div class="footer-col links-col">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#historia">História</a></li>
+                    <li><a href="#objetivo">Objetivo</a></li>
+                    <li><a href="#regimento">Regimento</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <h4>Contato e Localização</h4>
+                <p>Rua Exemplo, 123 - Centro</p>
+                <p>Cidade, Estado - CEP 00000-000</p>
+                <p>E-mail: contato@jaes.org</p>
+            </div>
+            <div class="footer-col social-col">
+                <h4>Siga-nos</h4>
+                <div class="social-icons">
+                    <a href="https://instagram.com/jaes" target="_blank" aria-label="Instagram">
+                        <i class="icon-instagram"></i> Instagram
+                    </a>
+                    <a href="https://paroquiasaojoaobosco.com" target="_blank" aria-label="Site da Paróquia">
+                        <i class="icon-church"></i> Paróquia
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 JAES - Todos os direitos reservados | Criado por um integrante do grupo JAES</p>
+        </div>
+    </footer>
+
+    <!-- 5. Arquivo JavaScript para interatividade -->
+    <script src="script.js"></script>
+</body>
+</html>
